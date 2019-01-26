@@ -688,7 +688,6 @@ Wire Wire Line
 	7250 5550 7350 5550
 Wire Wire Line
 	8700 5550 8600 5550
-NoConn ~ 6300 2350
 $Comp
 L power:VCC #PWR018
 U 1 1 5C46FD4A
@@ -1201,14 +1200,10 @@ Wire Wire Line
 Wire Wire Line
 	6500 1400 6500 1550
 Connection ~ 6450 1400
-Text Notes 6650 2400 0    157  ~ 0
-check extclk. No connect ok?
 Text Notes 7000 4000 0    157  ~ 0
 Add pull up and down resistors\ncheck whether chip can source or sink properly
 Text Notes 10500 1700 0    157  ~ 0
 change footprint of big caps
-Wire Wire Line
-	6500 1850 6500 2350
 Wire Wire Line
 	5100 2300 5200 2300
 Connection ~ 5100 2300
@@ -1649,6 +1644,24 @@ Wire Wire Line
 	6900 6950 6950 6950
 Wire Wire Line
 	6900 6400 6900 6350
+Connection ~ 6900 6350
+Wire Wire Line
+	6900 6350 6950 6350
+Wire Wire Line
+	6500 1850 6500 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5C4D7BC3
+P 6300 2300
+F 0 "#PWR?" H 6300 2050 50  0001 C CNN
+F 1 "GND" V 6350 2300 50  0000 C CNN
+F 2 "" H 6300 2300 50  0001 C CNN
+F 3 "" H 6300 2300 50  0001 C CNN
+	1    6300 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6300 2300 6300 2350
 Wire Wire Line
 	6400 1850 6400 2350
 Wire Bus Line
@@ -1661,7 +1674,4 @@ Wire Bus Line
 	5100 3950 6600 3950
 Wire Bus Line
 	8050 4550 8050 9400
-Connection ~ 6900 6350
-Wire Wire Line
-	6900 6350 6950 6350
 $EndSCHEMATC
