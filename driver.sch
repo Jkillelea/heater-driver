@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:driver-cache
 EELAYER 26 0
 EELAYER END
-$Descr A2 23386 16535
+$Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -35,10 +35,6 @@ Entry Wire Line
 	6100 2150 6200 2250
 Wire Wire Line
 	6200 2250 6200 2350
-Wire Wire Line
-	6400 2250 6400 2350
-Wire Wire Line
-	6500 2250 6500 2350
 Wire Bus Line
 	5850 1050 5850 2150
 Text Label 6500 2250 3    50   ~ 0
@@ -667,31 +663,15 @@ F 3 "" H 8900 1950 50  0001 C CNN
 	1    8900 1950
 	1    0    0    -1  
 $EndComp
-Text GLabel 10200 1350 2    50   Input ~ 0
+Text GLabel 10300 1350 2    50   Input ~ 0
 28V
 Connection ~ 9250 1350
 Text Label 8150 1350 0    50   ~ 0
 input_hicurrent
-Text Label 8150 1450 0    50   ~ 0
+Text Label 8150 1500 0    50   ~ 0
 gnd_hicurrent
-Text Notes 5350 1750 0    50   ~ 0
+Text Notes 5500 2900 0    50   ~ 0
 PWM Driver
-Wire Wire Line
-	9250 1350 9950 1350
-$Comp
-L Device:CP C3
-U 1 1 5C43F9F2
-P 9950 1500
-F 0 "C3" H 10068 1546 50  0000 L CNN
-F 1 "100uF" H 10068 1455 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 9988 1350 50  0001 C CNN
-F 3 "~" H 9950 1500 50  0001 C CNN
-	1    9950 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 9950 1350
-Wire Wire Line
-	9950 1350 10200 1350
 $Comp
 L power:GND #PWR021
 U 1 1 5C43FABC
@@ -703,19 +683,6 @@ F 3 "" H 9950 1950 50  0001 C CNN
 	1    9950 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:CP C4
-U 1 1 5C43FB71
-P 9950 1800
-F 0 "C4" H 10068 1846 50  0000 L CNN
-F 1 "100uF" H 10068 1755 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 9988 1650 50  0001 C CNN
-F 3 "~" H 9950 1800 50  0001 C CNN
-	1    9950 1800
-	1    0    0    -1  
-$EndComp
-Text Notes 10350 1750 0    50   ~ 0
-note: capacitors need to be rated\nto about 20V each
 Wire Wire Line
 	7250 4350 7350 4350
 Wire Wire Line
@@ -901,100 +868,100 @@ F 3 "" H 2550 2550 50  0001 C CNN
 	1    2550 2550
 	1    0    0    -1  
 $EndComp
-Text Notes 9350 1150 0    50   ~ 0
-Note: P-Mosfet is for reverse polarity protection\nShould be rated at 10+ Amps steady state
-Text GLabel 9000 2450 0    50   Input ~ 0
+Text Notes 9450 1150 0    50   ~ 0
+P-Mosfet is for reverse polarity protection\nShould be rated at 10+ Amps steady state.\nExpect 6 A.
+Text GLabel 10450 5600 0    50   Input ~ 0
 PWR_CH0
-Text GLabel 9000 2550 0    50   Input ~ 0
+Text GLabel 10450 5700 0    50   Input ~ 0
 PWR_CH1
-Text GLabel 9000 2650 0    50   Input ~ 0
+Text GLabel 10450 5800 0    50   Input ~ 0
 PWR_CH2
-Text GLabel 9000 2750 0    50   Input ~ 0
+Text GLabel 10450 5900 0    50   Input ~ 0
 PWR_CH3
-Text GLabel 9000 2850 0    50   Input ~ 0
+Text GLabel 10450 6000 0    50   Input ~ 0
 PWR_CH4
-Text GLabel 9000 2950 0    50   Input ~ 0
+Text GLabel 10450 6100 0    50   Input ~ 0
 PWR_CH5
-Text GLabel 9000 3050 0    50   Input ~ 0
+Text GLabel 10450 6200 0    50   Input ~ 0
 PWR_CH6
-Text GLabel 9000 3150 0    50   Input ~ 0
+Text GLabel 10450 6300 0    50   Input ~ 0
 PWR_CH7
-Text GLabel 9000 3250 0    50   Input ~ 0
+Text GLabel 10450 6400 0    50   Input ~ 0
 PWR_CH8
-Text GLabel 9000 3350 0    50   Input ~ 0
+Text GLabel 10450 6500 0    50   Input ~ 0
 PWR_CH9
-Text GLabel 9000 3450 0    50   Input ~ 0
+Text GLabel 10450 6600 0    50   Input ~ 0
 PWR_CH10
-Text GLabel 9000 3550 0    50   Input ~ 0
+Text GLabel 10450 6700 0    50   Input ~ 0
 PWR_CH11
-Text GLabel 9000 3650 0    50   Input ~ 0
+Text GLabel 10450 6800 0    50   Input ~ 0
 PWR_CH12
-Text GLabel 9000 3750 0    50   Input ~ 0
+Text GLabel 10450 6900 0    50   Input ~ 0
 PWR_CH13
-Text GLabel 9000 3850 0    50   Input ~ 0
+Text GLabel 10450 7000 0    50   Input ~ 0
 PWR_CH14
-Text GLabel 9000 3950 0    50   Input ~ 0
+Text GLabel 10450 7100 0    50   Input ~ 0
 PWR_CH15
-Text GLabel 9800 2450 2    50   Input ~ 0
+Text GLabel 11250 5600 2    50   Input ~ 0
 28V
 Wire Wire Line
-	9800 2450 9500 2450
+	11250 5600 10950 5600
 $Comp
 L Connector_Generic:Conn_02x16_Odd_Even J2
 U 1 1 5C444F23
-P 9200 3150
-F 0 "J2" H 9250 4067 50  0000 C CNN
-F 1 "Conn_02x16_Odd_Even" H 9250 3976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical" H 9200 3150 50  0001 C CNN
-F 3 "~" H 9200 3150 50  0001 C CNN
-	1    9200 3150
+P 10650 6300
+F 0 "J2" H 10700 7217 50  0000 C CNN
+F 1 "Conn_02x16_Odd_Even" H 10700 7126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical" H 10650 6300 50  0001 C CNN
+F 3 "~" H 10650 6300 50  0001 C CNN
+	1    10650 6300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 2450 9500 2550
-Connection ~ 9500 2450
+	10950 5600 10950 5700
+Connection ~ 10950 5600
 Wire Wire Line
-	9500 3850 9500 3950
+	10950 7000 10950 7100
 Wire Wire Line
-	9500 2550 9500 2650
-Connection ~ 9500 2550
-Connection ~ 9500 3850
-Connection ~ 9500 2650
+	10950 5700 10950 5800
+Connection ~ 10950 5700
+Connection ~ 10950 7000
+Connection ~ 10950 5800
 Wire Wire Line
-	9500 2650 9500 2750
-Connection ~ 9500 2750
+	10950 5800 10950 5900
+Connection ~ 10950 5900
 Wire Wire Line
-	9500 2750 9500 2850
-Connection ~ 9500 2850
+	10950 5900 10950 6000
+Connection ~ 10950 6000
 Wire Wire Line
-	9500 2850 9500 2950
-Connection ~ 9500 2950
+	10950 6000 10950 6100
+Connection ~ 10950 6100
 Wire Wire Line
-	9500 2950 9500 3050
-Connection ~ 9500 3050
+	10950 6100 10950 6200
+Connection ~ 10950 6200
 Wire Wire Line
-	9500 3050 9500 3150
-Connection ~ 9500 3150
+	10950 6200 10950 6300
+Connection ~ 10950 6300
 Wire Wire Line
-	9500 3150 9500 3250
-Connection ~ 9500 3250
+	10950 6300 10950 6400
+Connection ~ 10950 6400
 Wire Wire Line
-	9500 3250 9500 3350
-Connection ~ 9500 3350
+	10950 6400 10950 6500
+Connection ~ 10950 6500
 Wire Wire Line
-	9500 3350 9500 3450
-Connection ~ 9500 3450
+	10950 6500 10950 6600
+Connection ~ 10950 6600
 Wire Wire Line
-	9500 3450 9500 3550
-Connection ~ 9500 3550
+	10950 6600 10950 6700
+Connection ~ 10950 6700
 Wire Wire Line
-	9500 3550 9500 3650
-Connection ~ 9500 3650
+	10950 6700 10950 6800
+Connection ~ 10950 6800
 Wire Wire Line
-	9500 3650 9500 3750
-Connection ~ 9500 3750
+	10950 6800 10950 6900
+Connection ~ 10950 6900
 Wire Wire Line
-	9500 3750 9500 3850
+	10950 6900 10950 7000
 Entry Wire Line
 	5000 3850 5100 3950
 Entry Wire Line
@@ -1204,6 +1171,114 @@ Wire Wire Line
 	8600 2000 8600 1950
 Wire Wire Line
 	8600 1950 8900 1950
+Connection ~ 8900 1950
+Text Notes 2350 950  0    50   ~ 0
+I2C
+Text Notes 5750 950  0    50   ~ 0
+I2C
+Text Notes 6150 2050 0    50   ~ 0
+I2C
+Text Notes 2350 3250 0    50   ~ 0
+I2C
+Text Notes 2700 2150 0    50   ~ 0
+Reset
+Text Notes 5650 4200 0    50   ~ 0
+PWM channels
+Text Notes 8100 4200 0    50   ~ 0
+100mA in each MOSFET
+Text Notes 10100 5200 0    50   ~ 0
+Connector to heaters is just a pin header.\nRated at 1 A per contact
+Text Notes 11900 10300 0    157  ~ 0
+Heater Driver PCB
+Wire Wire Line
+	9250 1350 9850 1350
+$Comp
+L Device:CP C?
+U 1 1 5C4A597D
+P 9850 1650
+F 0 "C?" H 9968 1696 50  0000 L CNN
+F 1 "CP" H 9968 1605 50  0000 L CNN
+F 2 "" H 9888 1500 50  0001 C CNN
+F 3 "~" H 9850 1650 50  0001 C CNN
+	1    9850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C4A5A2A
+P 10200 1650
+F 0 "C?" H 10315 1696 50  0000 L CNN
+F 1 "C" H 10315 1605 50  0000 L CNN
+F 2 "" H 10238 1500 50  0001 C CNN
+F 3 "~" H 10200 1650 50  0001 C CNN
+	1    10200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 1500 10200 1350
+Connection ~ 10200 1350
+Wire Wire Line
+	10200 1350 10300 1350
+Wire Wire Line
+	9850 1500 9850 1350
+Connection ~ 9850 1350
+Wire Wire Line
+	9850 1350 10200 1350
+Wire Wire Line
+	9850 1800 9850 1950
+Wire Wire Line
+	9850 1950 9950 1950
+Wire Wire Line
+	9950 1950 10200 1950
+Wire Wire Line
+	10200 1950 10200 1800
+Connection ~ 9950 1950
+$Comp
+L Device:R R?
+U 1 1 5C4B6584
+P 6500 1700
+F 0 "R?" H 6570 1746 50  0000 L CNN
+F 1 "10k" V 6500 1650 50  0000 L CNN
+F 2 "" V 6430 1700 50  0001 C CNN
+F 3 "~" H 6500 1700 50  0001 C CNN
+	1    6500 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C4B6DD0
+P 6400 1700
+F 0 "R?" H 6250 1750 50  0000 L CNN
+F 1 "10k" V 6400 1650 50  0000 L CNN
+F 2 "" V 6330 1700 50  0001 C CNN
+F 3 "~" H 6400 1700 50  0001 C CNN
+	1    6400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1850 6500 2350
+$Comp
+L power:VCC #PWR?
+U 1 1 5C4C40EE
+P 6450 1400
+F 0 "#PWR?" H 6450 1250 50  0001 C CNN
+F 1 "VCC" H 6467 1573 50  0000 C CNN
+F 2 "" H 6450 1400 50  0001 C CNN
+F 3 "" H 6450 1400 50  0001 C CNN
+	1    6450 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1400 6400 1400
+Wire Wire Line
+	6400 1400 6400 1550
+Wire Wire Line
+	6450 1400 6500 1400
+Wire Wire Line
+	6500 1400 6500 1550
+Connection ~ 6450 1400
+Wire Wire Line
+	6400 1850 6400 2350
 Wire Bus Line
 	5850 2150 6400 2150
 Wire Bus Line
@@ -1214,5 +1289,10 @@ Wire Bus Line
 	5100 3950 6600 3950
 Wire Bus Line
 	8050 4550 8050 9400
-Connection ~ 8900 1950
+Text Notes 6650 2400 0    157  ~ 0
+check extclk. No connect ok?
+Text Notes 7000 4000 0    157  ~ 0
+Add pull up and down resistors\ncheck whether chip can source or sink properly
+Text Notes 10500 1700 0    157  ~ 0
+change footprint of big caps
 $EndSCHEMATC
