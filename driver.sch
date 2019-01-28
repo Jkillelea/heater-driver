@@ -105,9 +105,9 @@ $Comp
 L Device:C C1
 U 1 1 5C1B80A4
 P 6800 3250
-F 0 "C1" H 6915 3296 50  0000 L CNN
-F 1 "1u" H 6915 3205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6838 3100 50  0001 C CNN
+F 0 "C1" H 6825 3350 50  0000 L CNN
+F 1 "0.1uF" H 6825 3150 50  0000 L CNN
+F 2 "" H 6838 3100 50  0001 C CNN
 F 3 "~" H 6800 3250 50  0001 C CNN
 	1    6800 3250
 	1    0    0    -1  
@@ -146,8 +146,8 @@ L Device:CP C2
 U 1 1 5C419F91
 P 7150 3250
 F 0 "C2" H 7268 3296 50  0000 L CNN
-F 1 "100uF" H 7268 3205 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 7188 3100 50  0001 C CNN
+F 1 "10uF" H 7268 3205 50  0000 L CNN
+F 2 "" H 7188 3100 50  0001 C CNN
 F 3 "~" H 7150 3250 50  0001 C CNN
 	1    7150 3250
 	1    0    0    -1  
@@ -471,7 +471,7 @@ Text GLabel 8750 6750 2    50   Input ~ 0
 PWR_CH11
 Wire Wire Line
 	8650 6750 8750 6750
-Text Notes 7950 1000 0    79   ~ 0
+Text Notes 7550 900  0    79   ~ 0
 Heater power input
 $Comp
 L Connector:Screw_Terminal_01x02 J1
@@ -681,8 +681,8 @@ F 3 "" H 2550 2550 50  0001 C CNN
 	1    2550 2550
 	1    0    0    -1  
 $EndComp
-Text Notes 9450 1150 0    50   ~ 0
-P-Mosfet is for reverse polarity protection\nShould be rated at 10+ Amps steady state.\nExpect 6 A.
+Text Notes 9450 1250 0    50   ~ 0
+P-Mosfet is for reverse polarity protection\nShould be rated at 5+ Amps steady state.\nExpect 2 A.
 Text GLabel 10450 5600 0    50   Input ~ 0
 PWR_CH0
 Text GLabel 10450 5700 0    50   Input ~ 0
@@ -875,8 +875,8 @@ Text Notes 6150 2050 0    50   ~ 0
 I2C
 Text Notes 2350 3250 0    50   ~ 0
 I2C
-Text Notes 2700 2150 0    50   ~ 0
-Reset (optional)
+Text Notes 2450 1550 0    50   ~ 0
+Optional
 Text Notes 5650 4200 0    50   ~ 0
 PWM channels
 Text Notes 8100 4200 0    50   ~ 0
@@ -892,7 +892,7 @@ L Device:CP C3
 U 1 1 5C4A597D
 P 9850 1650
 F 0 "C3" H 9968 1696 50  0000 L CNN
-F 1 "CP" H 9968 1605 50  0000 L CNN
+F 1 "10uF" H 9900 1550 50  0000 L CNN
 F 2 "" H 9888 1500 50  0001 C CNN
 F 3 "~" H 9850 1650 50  0001 C CNN
 	1    9850 1650
@@ -903,7 +903,7 @@ L Device:C C4
 U 1 1 5C4A5A2A
 P 10200 1650
 F 0 "C4" H 10315 1696 50  0000 L CNN
-F 1 "C" H 10315 1605 50  0000 L CNN
+F 1 "0.1uF" H 10315 1605 50  0000 L CNN
 F 2 "" H 10238 1500 50  0001 C CNN
 F 3 "~" H 10200 1650 50  0001 C CNN
 	1    10200 1650
@@ -972,7 +972,7 @@ Wire Wire Line
 Connection ~ 6450 1400
 Text Notes 7000 4000 0    157  ~ 0
 Add pull up and down resistors\ncheck whether chip can source or sink properly
-Text Notes 10500 1700 0    157  ~ 0
+Text Notes 8250 2900 0    157  ~ 0
 change footprint of big caps
 $Comp
 L Device:R_Small R4
@@ -1501,10 +1501,34 @@ NoConn ~ 5000 3750
 NoConn ~ 5300 3750
 Wire Wire Line
 	6500 1850 6500 2350
-Wire Bus Line
-	5850 2150 6400 2150
+Wire Notes Line
+	2400 1600 2400 2800
+Wire Notes Line
+	2400 2800 3050 2800
+Wire Notes Line
+	3050 2800 3050 1600
+Wire Notes Line
+	3050 1600 2400 1600
+Wire Notes Line
+	7550 950  11150 950 
+Wire Notes Line
+	11150 950  11150 2250
+Wire Notes Line
+	11150 2250 7550 2250
+Wire Notes Line
+	7550 2250 7550 950 
+Wire Notes Line
+	10000 5250 10000 6950
+Wire Notes Line
+	10000 6950 11500 6950
+Wire Notes Line
+	11500 6950 11500 5250
+Wire Notes Line
+	11500 5250 10000 5250
 Wire Wire Line
 	6400 1850 6400 2350
+Wire Bus Line
+	5850 2150 6400 2150
 Wire Bus Line
 	8050 7050 8050 9400
 Wire Bus Line
