@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "/home/jacob/Documents/School/Senior Projects/Test Bed Electronics/Heater Driver Multichannel/driver.sch")
-    (date "Tue 29 Jan 2019 08:23:10 PM MST")
+    (date "Thu 31 Jan 2019 01:30:59 PM MST")
     (tool "Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
