@@ -26,7 +26,7 @@ F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 1350 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Bus Line
-	5850 1050 2300 1050
+	5850 1050 3200 1050
 Entry Wire Line
 	6400 2150 6500 2250
 Entry Wire Line
@@ -484,17 +484,6 @@ F 3 "~" H 7950 1450 50  0001 C CNN
 	1    7950 1450
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:Q_PMOS_DGS Q17
-U 1 1 5C429FD6
-P 8900 1450
-F 0 "Q17" V 9243 1450 50  0000 C CNN
-F 1 "IRF9Z34 PMOS_DGS" V 9152 1450 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9100 1550 50  0001 C CNN
-F 3 "~" H 8900 1450 50  0001 C CNN
-	1    8900 1450
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8150 1350 8700 1350
 $Comp
@@ -523,7 +512,6 @@ F 3 "~" H 8900 1800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9250 1650 8900 1650
-Connection ~ 8900 1650
 $Comp
 L power:GND #PWR020
 U 1 1 5C437281
@@ -1503,8 +1491,68 @@ Wire Notes Line
 Wire Notes Line
 	7550 950  7550 2500
 NoConn ~ 2050 2150
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5C54F291
+P 3400 1900
+F 0 "J3" V 3553 1613 50  0000 R CNN
+F 1 "Conn_01x04_Male" V 3462 1613 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 3400 1900 50  0001 C CNN
+F 3 "~" H 3400 1900 50  0001 C CNN
+	1    3400 1900
+	0    -1   -1   0   
+$EndComp
+Wire Bus Line
+	3200 1500 3200 1050
+Connection ~ 3200 1050
+Wire Bus Line
+	3200 1050 2300 1050
+Entry Wire Line
+	3200 1500 3300 1600
+Entry Wire Line
+	3300 1500 3400 1600
+Wire Wire Line
+	3300 1600 3300 1700
+Wire Wire Line
+	3400 1600 3400 1700
+Text Label 3300 1700 1    50   ~ 0
+SDA
+Text Label 3400 1700 1    50   ~ 0
+SCL
+$Comp
+L power:VCC #PWR02
+U 1 1 5C55CB70
+P 3500 1500
+F 0 "#PWR02" H 3500 1350 50  0001 C CNN
+F 1 "VCC" H 3517 1673 50  0000 C CNN
+F 2 "" H 3500 1500 50  0001 C CNN
+F 3 "" H 3500 1500 50  0001 C CNN
+	1    3500 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1500 3500 1700
+$Comp
+L power:GND #PWR03
+U 1 1 5C5616C7
+P 3650 1500
+F 0 "#PWR03" H 3650 1250 50  0001 C CNN
+F 1 "GND" H 3655 1327 50  0000 C CNN
+F 2 "" H 3650 1500 50  0001 C CNN
+F 3 "" H 3650 1500 50  0001 C CNN
+	1    3650 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 1500 3650 1550
+Wire Wire Line
+	3650 1550 3600 1550
+Wire Wire Line
+	3600 1550 3600 1700
 Wire Wire Line
 	6500 1850 6500 2350
+Wire Bus Line
+	3200 1500 3400 1500
 Wire Bus Line
 	5850 2150 6400 2150
 Wire Wire Line
@@ -1517,4 +1565,16 @@ Wire Bus Line
 	6600 3950 6600 9400
 Wire Bus Line
 	5100 3950 6600 3950
+$Comp
+L Device:Q_PMOS_GDS Q1
+U 1 1 5C5B9973
+P 8900 1450
+F 0 "Q1" V 9243 1450 50  0000 C CNN
+F 1 "IRF9Z34 PMOS_GDS" V 9152 1450 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9100 1550 50  0001 C CNN
+F 3 "~" H 8900 1450 50  0001 C CNN
+	1    8900 1450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8900 1650
 $EndSCHEMATC
