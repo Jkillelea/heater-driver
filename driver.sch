@@ -808,8 +808,8 @@ Text Notes 8100 4200 0    50   ~ 0
 100mA in each MOSFET
 Text Notes 10100 5200 0    50   ~ 0
 Connector to heaters is just a pin header.\nRated at 1 A per contact
-Text Notes 11900 10300 0    157  ~ 0
-Heater Driver PCB
+Text Notes 11900 10500 0    157  ~ 31
+GA / Team OTheRS\nJacob Killelea
 $Comp
 L Device:CP C3
 U 1 1 5C4A597D
@@ -1549,6 +1549,18 @@ Wire Wire Line
 	3650 1550 3600 1550
 Wire Wire Line
 	3600 1550 3600 1700
+$Comp
+L Device:Q_PMOS_GDS Q1
+U 1 1 5C5B9973
+P 8900 1450
+F 0 "Q1" V 9243 1450 50  0000 C CNN
+F 1 "IRF9Z34 PMOS_GDS" V 9152 1450 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9100 1550 50  0001 C CNN
+F 3 "~" H 8900 1450 50  0001 C CNN
+	1    8900 1450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8900 1650
 Wire Wire Line
 	6500 1850 6500 2350
 Wire Bus Line
@@ -1565,16 +1577,6 @@ Wire Bus Line
 	6600 3950 6600 9400
 Wire Bus Line
 	5100 3950 6600 3950
-$Comp
-L Device:Q_PMOS_GDS Q1
-U 1 1 5C5B9973
-P 8900 1450
-F 0 "Q1" V 9243 1450 50  0000 C CNN
-F 1 "IRF9Z34 PMOS_GDS" V 9152 1450 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9100 1550 50  0001 C CNN
-F 3 "~" H 8900 1450 50  0001 C CNN
-	1    8900 1450
-	0    -1   -1   0   
-$EndComp
-Connection ~ 8900 1650
+Text Notes 12300 10950 0    118  ~ 0
+Heater Driver
 $EndSCHEMATC
